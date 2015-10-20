@@ -1,7 +1,16 @@
-#Codebook
+---
+title: "Codebook"
+author: "Muhammad Haseeb Ahmad"
+date: "Oct. 20, 2015"
+output:
+---
 
-This document explains the various features contained in the final **tidy** data table.
+##Project Description
+The project takes a raw data as input and generates a tidy dataset in long format.
 
+
+##Study Design and Data Processing
+###Collection of the Raw Data
 The original features which are summarized here came from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
@@ -11,10 +20,19 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
+##Creating the Tidy Data File
+###Guide to create the tidy data file
+1. Download the data file [*here*](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+2. Unzip the file to your desired working directory.
+3. Download the *run_analysis.R* file from this repository into the same working directory.
+4. Source the script and you will find a find a file called *TidyData_Long_Format.txt* in your working directory.
+Note: The final data table is in '*long format*' as opposed to '*wide format*'.
 
-The final data table is in a '*long format*' as opposed to '*wide format*'.
+###Cleaning of the data
+To learn how the various components of the script work to clean the data, click [*here*](https://github.com/Haseeb92/Coursera_JHU-Getting-and-Cleaning-Data-project/blob/master/README.md).
 
-The final data table contains columns for the following variables:
+##Description of the variables in the *TidyData_Long_Format.txt* file
+The final dataset is a (15481 x 5) table containing columns for the following variables:
 
 1. *Subject.ID:* ID numbers allotted to each of 30 volunteers who took part in the experiment.
 
